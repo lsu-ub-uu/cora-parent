@@ -25,7 +25,7 @@
 
 	<groupId>se.uu.ub.cora</groupId>
 	<artifactId>cora-parent</artifactId>
-	<version>0.3-SNAPSHOT</version>
+    <version>0.4-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Cora Parent</name>
 	<description>Cora Parent POM</description>
@@ -34,9 +34,15 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<compile.source>1.8</compile.source>
-		<sonar-plugin.version>2.6</sonar-plugin.version>
-		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-		<testng.version>6.8.8</testng.version>
+        <testng.version>6.8.8</testng.version>
+        <sonar-plugin.version>2.6</sonar-plugin.version>
+        <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+        <jacoco.version>0.7.4.201502262128</jacoco.version>
+        <jacoco.outputDir>${project.build.directory}/jacoco</jacoco.outputDir>
+        <jacoco.out.ut.file>jacoco-ut.exec</jacoco.out.ut.file>
+        <jacoco.out.it.file>jacoco-it.exec</jacoco.out.it.file>
+        <sonar.jacoco.reportPath>${jacoco.outputDir}/${jacoco.out.ut.file}</sonar.jacoco.reportPath>
+        <sonar.jacoco.itReportPath>${jacoco.outputDir}/${jacoco.out.it.file}</sonar.jacoco.itReportPath>
 	</properties>
 
 	<organization>
@@ -159,18 +165,73 @@
 	</build>
 
 	<profiles>
-		<profile>
-			<id>sonar</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>sonar-maven-plugin</artifactId>
-						<version>${sonar-plugin.version}</version>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+        <profile>
+            <id>sonar</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>sonar-maven-plugin</artifactId>
+                        <version>${sonar-plugin.version}</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.18.1</version>
+                        <configuration>
+                            <argLine>-Xmx1G -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled ${jacoco.agent.ut.arg}</argLine>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>2.19.1</version>
+                        <configuration>
+                            <argLine>-Xmx1G -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled ${jacoco.agent.it.arg}</argLine>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>${jacoco.version}</version>
+                        <executions>
+                            <execution>
+                                <id>prepare-ut-agent</id>
+                                <phase>process-test-classes</phase>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                                <configuration>
+                                    <destFile>${sonar.jacoco.reportPath}</destFile>
+                                    <propertyName>jacoco.agent.ut.arg</propertyName>
+                                    <append>true</append>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>prepare-it-agent</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>prepare-agent-integration</goal>
+                                </goals>
+                                <configuration>
+                                    <destFile>${sonar.jacoco.itReportPath}</destFile>
+                                    <propertyName>jacoco.agent.it.arg</propertyName>
+                                    <append>true</append>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
 	</profiles>
 
 </project>
