@@ -35,7 +35,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<compile.source>1.8</compile.source>
         <testng.version>6.8.8</testng.version>
-        <sonar-plugin.version>2.6</sonar-plugin.version>
+        <sonar.scanner.version>3.0.1</sonar.scanner.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <jacoco.version>0.7.4.201502262128</jacoco.version>
         <sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
@@ -146,6 +146,11 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.1</version>
 				</plugin>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>${sonar.scanner.version}</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 
@@ -166,11 +171,11 @@
             <id>sonar</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>sonar-maven-plugin</artifactId>
-                        <version>${sonar-plugin.version}</version>
-                    </plugin>
+					<plugin>
+						<groupId>org.sonarsource.scanner.maven</groupId>
+						<artifactId>sonar-maven-plugin</artifactId>
+						<version>${sonar.scanner.version}</version>
+					</plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
