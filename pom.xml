@@ -37,7 +37,7 @@
         <testng.version>6.8.8</testng.version>
         <sonar.scanner.version>3.0.1</sonar.scanner.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-        <jacoco.version>0.7.6.201602180812</jacoco.version>
+        <jacoco.version>0.7.4.201502262128</jacoco.version>
         <sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
         <sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
 	</properties>
