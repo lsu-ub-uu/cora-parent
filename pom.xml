@@ -25,7 +25,7 @@
 
 	<groupId>se.uu.ub.cora</groupId>
 	<artifactId>cora-parent</artifactId>
-    <version>0.5-SNAPSHOT</version>
+    <version>0.6-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Cora Parent</name>
 	<description>Cora Parent POM</description>
@@ -115,20 +115,20 @@
 		</contributor>
 	</contributors>
 
-	<distributionManagement>
-		<repository>
-			<id>epc-release</id>
-			<name>EPC Releases</name>
-			<url>http://epc.ub.uu.se/nexus/content/repositories/epc-release</url>
-		</repository>
-		<snapshotRepository>
-			<id>epc-snapshot</id>
-			<name>Internal Snapshots</name>
-			<url>http://epc.ub.uu.se/nexus/content/repositories/epc-snapshot</url>
-		</snapshotRepository>
-	</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>epc-release</id>
+            <name>EPC Releases</name>
+            <url>http://epc.ub.uu.se/nexus/repository/epc-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>epc-snapshot</id>
+            <name>Internal Snapshots</name>
+            <url>http://epc.ub.uu.se/nexus/repository/epc-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
 
-	<build>
+    <build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
