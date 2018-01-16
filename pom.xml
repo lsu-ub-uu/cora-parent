@@ -19,101 +19,101 @@
   -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>se.uu.ub.cora</groupId>
-	<artifactId>cora-parent</artifactId>
+    <groupId>se.uu.ub.cora</groupId>
+    <artifactId>cora-parent</artifactId>
     <version>0.6-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>Cora Parent</name>
-	<description>Cora Parent POM</description>
+    <packaging>pom</packaging>
+    <name>Cora Parent</name>
+    <description>Cora Parent POM</description>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<compile.source>1.8</compile.source>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <compile.source>1.8</compile.source>
         <testng.version>6.8.8</testng.version>
         <sonar.scanner.version>3.0.1</sonar.scanner.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <jacoco.version>0.7.4.201502262128</jacoco.version>
         <sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
         <sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
-	</properties>
+    </properties>
 
-	<organization>
-		<name>Library systems unit, Uppsala University Library, Sweden</name>
-		<url>http://ub.uu.se</url>
-	</organization>
-	<developers>
-		<developer>
-			<id>uwek</id>
-			<name>Uwe Klosa</name>
-			<email>uwe.klosa@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>madeleine</id>
-			<name>Madeleine Kennbäck</name>
-			<email>madeleine.kennback@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>mimmi</id>
-			<name>Mimmi Sundin</name>
-			<email>mimmi.sundin@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>olov</id>
-			<name>Olov McKie</name>
-			<email>olov.mckie@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>+1</timezone>
-		</developer>
-	</developers>
-	<contributors>
-		<contributor>
-			<name>Marcus Lindström</name>
-			<email>marcus.lindstrom@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>system administrator</role>
-			</roles>
-			<timezone>+1</timezone>
-		</contributor>
-		<contributor>
-			<name>Stefan Andersson</name>
-			<email>stefan.andersson@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>information specialist</role>
-			</roles>
-			<timezone>+1</timezone>
-		</contributor>
-	</contributors>
+    <organization>
+        <name>Library systems unit, Uppsala University Library, Sweden</name>
+        <url>http://ub.uu.se</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>uwek</id>
+            <name>Uwe Klosa</name>
+            <email>uwe.klosa@ub.uu.se</email>
+            <organization>Library systems unit, Uppsala University Library</organization>
+            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+        <developer>
+            <id>madeleine</id>
+            <name>Madeleine Kennbäck</name>
+            <email>madeleine.kennback@ub.uu.se</email>
+            <organization>Library systems unit, Uppsala University Library</organization>
+            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+        <developer>
+            <id>mimmi</id>
+            <name>Mimmi Sundin</name>
+            <email>mimmi.sundin@ub.uu.se</email>
+            <organization>Library systems unit, Uppsala University Library</organization>
+            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+        <developer>
+            <id>olov</id>
+            <name>Olov McKie</name>
+            <email>olov.mckie@ub.uu.se</email>
+            <organization>Library systems unit, Uppsala University Library</organization>
+            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+    </developers>
+    <contributors>
+        <contributor>
+            <name>Marcus Lindström</name>
+            <email>marcus.lindstrom@ub.uu.se</email>
+            <organization>Library systems unit, Uppsala University Library</organization>
+            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
+            <roles>
+                <role>system administrator</role>
+            </roles>
+            <timezone>+1</timezone>
+        </contributor>
+        <contributor>
+            <name>Stefan Andersson</name>
+            <email>stefan.andersson@ub.uu.se</email>
+            <organization>Library systems unit, Uppsala University Library</organization>
+            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
+            <roles>
+                <role>information specialist</role>
+            </roles>
+            <timezone>+1</timezone>
+        </contributor>
+    </contributors>
 
     <distributionManagement>
         <repository>
@@ -158,53 +158,58 @@
         </pluginRepository>
     </pluginRepositories>
     <build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>2.18.1</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<version>2.5.5</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.1</version>
-				</plugin>
-				<plugin>
-					<groupId>org.sonarsource.scanner.maven</groupId>
-					<artifactId>sonar-maven-plugin</artifactId>
-					<version>${sonar.scanner.version}</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>2.18.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.5.5</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>${sonar.scanner.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>1.3.7</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${compile.source}</source>
-					<target>${compile.source}</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${compile.source}</source>
+                    <target>${compile.source}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-	<profiles>
+    <profiles>
         <profile>
             <id>sonar</id>
             <build>
                 <plugins>
-					<plugin>
-						<groupId>org.sonarsource.scanner.maven</groupId>
-						<artifactId>sonar-maven-plugin</artifactId>
-						<version>${sonar.scanner.version}</version>
-					</plugin>
+                    <plugin>
+                        <groupId>org.sonarsource.scanner.maven</groupId>
+                        <artifactId>sonar-maven-plugin</artifactId>
+                        <version>${sonar.scanner.version}</version>
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
@@ -263,6 +268,6 @@
                 </plugins>
             </build>
         </profile>
-	</profiles>
+    </profiles>
 
 </project>
