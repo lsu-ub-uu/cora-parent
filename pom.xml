@@ -36,6 +36,7 @@
         <compile.source>1.8</compile.source>
         <testng.version>6.10</testng.version>
         <sonar.scanner.version>3.5.0.1254</sonar.scanner.version>
+        <sonar.java.version>5.7.0.15470</sonar.java.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <jacoco.version>0.8.2</jacoco.version>
         <sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
@@ -215,6 +216,11 @@
                         <groupId>org.sonarsource.scanner.maven</groupId>
                         <artifactId>sonar-maven-plugin</artifactId>
                         <version>${sonar.scanner.version}</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonarsource.java</groupId>
+                        <artifactId>sonar-java-plugin</artifactId>
+                        <version>${sonar.java.version}</version>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
