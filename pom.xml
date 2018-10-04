@@ -31,9 +31,10 @@
     <description>Cora Parent POM</description>
 
     <properties>
+        <java.release.version>10</java.release.version>
+        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <compile.source>1.8</compile.source>
         <testng.version>6.10</testng.version>
         <sonar.scanner.version>3.5.0.1254</sonar.scanner.version>
         <sonar.java.version>5.7.0.15470</sonar.java.version>
@@ -197,90 +198,17 @@
         </pluginManagement>
 
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${compile.source}</source>
-                    <target>${compile.source}</target>
-                </configuration>
-            </plugin>
-        </plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<release>${java.release.version}</release>
+				</configuration>
+			</plugin>
+		</plugins>
     </build>
 
     <profiles>
-        <profile>
-            <id>sonar</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonarsource.scanner.maven</groupId>
-                        <artifactId>sonar-maven-plugin</artifactId>
-                        <version>${sonar.scanner.version}</version>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.sonarsource.java</groupId>
-                        <artifactId>sonar-java-plugin</artifactId>
-                        <version>${sonar.java.version}</version>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.22.0</version>
-                        <configuration>
-                            <argLine>-Xmx1G  -XX:+CMSClassUnloadingEnabled ${jacoco.agent.ut.arg}</argLine>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-failsafe-plugin</artifactId>
-                        <version>2.22.0</version>
-                        <configuration>
-                            <argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled ${jacoco.agent.it.arg}</argLine>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>integration-test</goal>
-                                    <goal>verify</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>${jacoco.version}</version>
-                        <executions>
-                            <execution>
-                                <id>prepare-ut-agent</id>
-                                <phase>process-test-classes</phase>
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                                <configuration>
-                                    <destFile>${sonar.jacoco.reportPath}</destFile>
-                                    <propertyName>jacoco.agent.ut.arg</propertyName>
-                                    <append>true</append>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>prepare-it-agent</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>prepare-agent-integration</goal>
-                                </goals>
-                                <configuration>
-                                    <destFile>${sonar.jacoco.itReportPath}</destFile>
-                                    <propertyName>jacoco.agent.it.arg</propertyName>
-                                    <append>true</append>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
         <profile>
             <id>sonar-cora</id>
             <build>
