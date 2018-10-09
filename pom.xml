@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright 2015 Uppsala University Library
+  ~ Copyright 2015, 2018 Uppsala University Library
   ~
   ~ This file is part of Cora.
   ~
@@ -19,181 +19,181 @@
   -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>se.uu.ub.cora</groupId>
-    <artifactId>cora-parent</artifactId>
-    <version>0.7-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>Cora Parent</name>
-    <description>Cora Parent POM</description>
+	<groupId>se.uu.ub.cora</groupId>
+	<artifactId>cora-parent</artifactId>
+	<version>0.7-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Cora Parent</name>
+	<description>Cora Parent POM</description>
 
-    <properties>
-        <java.release.version>10</java.release.version>
-        
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <testng.version>6.10</testng.version>
-        <sonar.scanner.version>3.5.0.1254</sonar.scanner.version>
-        <sonar.java.version>5.7.0.15470</sonar.java.version>
-        <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-        <jacoco.version>0.8.2</jacoco.version>
-        <sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
-        <sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
-    </properties>
+	<properties>
+		<java.release.version>10</java.release.version>
 
-    <organization>
-        <name>Library systems unit, Uppsala University Library, Sweden</name>
-        <url>http://ub.uu.se</url>
-    </organization>
-    <developers>
-        <developer>
-            <id>uwek</id>
-            <name>Uwe Klosa</name>
-            <email>uwe.klosa@ub.uu.se</email>
-            <organization>Library systems unit, Uppsala University Library</organization>
-            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </developer>
-        <developer>
-            <id>madeleine</id>
-            <name>Madeleine Kennbäck</name>
-            <email>madeleine.kennback@ub.uu.se</email>
-            <organization>Library systems unit, Uppsala University Library</organization>
-            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </developer>
-        <developer>
-            <id>mimmi</id>
-            <name>Mimmi Sundin</name>
-            <email>mimmi.sundin@ub.uu.se</email>
-            <organization>Library systems unit, Uppsala University Library</organization>
-            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </developer>
-        <developer>
-            <id>olov</id>
-            <name>Olov McKie</name>
-            <email>olov.mckie@ub.uu.se</email>
-            <organization>Library systems unit, Uppsala University Library</organization>
-            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </developer>
-    </developers>
-    <contributors>
-        <contributor>
-            <name>Marcus Lindström</name>
-            <email>marcus.lindstrom@ub.uu.se</email>
-            <organization>Library systems unit, Uppsala University Library</organization>
-            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
-            <roles>
-                <role>system administrator</role>
-            </roles>
-            <timezone>+1</timezone>
-        </contributor>
-        <contributor>
-            <name>Stefan Andersson</name>
-            <email>stefan.andersson@ub.uu.se</email>
-            <organization>Library systems unit, Uppsala University Library</organization>
-            <organizationUrl>http://epc.ub.uu.se</organizationUrl>
-            <roles>
-                <role>information specialist</role>
-            </roles>
-            <timezone>+1</timezone>
-        </contributor>
-    </contributors>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<testng.version>6.10</testng.version>
+		<sonar.scanner.version>3.5.0.1254</sonar.scanner.version>
+		<sonar.java.version>5.7.0.15470</sonar.java.version>
+		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+		<jacoco.version>0.8.2</jacoco.version>
+		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
+		<sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
+	</properties>
 
-    <distributionManagement>
-        <repository>
-            <id>epc-release</id>
-            <name>EPC Releases</name>
-            <url>http://epc.ub.uu.se/nexus/repository/epc-release</url>
-        </repository>
-        <snapshotRepository>
-            <id>epc-snapshot</id>
-            <name>Internal Snapshots</name>
-            <url>http://epc.ub.uu.se/nexus/repository/epc-snapshot</url>
-        </snapshotRepository>
-    </distributionManagement>
+	<organization>
+		<name>Library systems unit, Uppsala University Library, Sweden</name>
+		<url>http://ub.uu.se</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>uwek</id>
+			<name>Uwe Klosa</name>
+			<email>uwe.klosa@ub.uu.se</email>
+			<organization>Library systems unit, Uppsala University Library</organization>
+			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+		<developer>
+			<id>madeleine</id>
+			<name>Madeleine Kennbäck</name>
+			<email>madeleine.kennback@ub.uu.se</email>
+			<organization>Library systems unit, Uppsala University Library</organization>
+			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+		<developer>
+			<id>mimmi</id>
+			<name>Mimmi Sundin</name>
+			<email>mimmi.sundin@ub.uu.se</email>
+			<organization>Library systems unit, Uppsala University Library</organization>
+			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+		<developer>
+			<id>olov</id>
+			<name>Olov McKie</name>
+			<email>olov.mckie@ub.uu.se</email>
+			<organization>Library systems unit, Uppsala University Library</organization>
+			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Marcus Lindström</name>
+			<email>marcus.lindstrom@ub.uu.se</email>
+			<organization>Library systems unit, Uppsala University Library</organization>
+			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
+			<roles>
+				<role>system administrator</role>
+			</roles>
+			<timezone>+1</timezone>
+		</contributor>
+		<contributor>
+			<name>Stefan Andersson</name>
+			<email>stefan.andersson@ub.uu.se</email>
+			<organization>Library systems unit, Uppsala University Library</organization>
+			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
+			<roles>
+				<role>information specialist</role>
+			</roles>
+			<timezone>+1</timezone>
+		</contributor>
+	</contributors>
 
-    <repositories>
-        <repository>
-            <id>maven-public</id>
-            <name>LSU Nexus Repository</name>
-            <url>http://epc.ub.uu.se/nexus/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <updatePolicy>daily</updatePolicy>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+	<distributionManagement>
+		<repository>
+			<id>epc-release</id>
+			<name>EPC Releases</name>
+			<url>http://epc.ub.uu.se/nexus/repository/epc-release</url>
+		</repository>
+		<snapshotRepository>
+			<id>epc-snapshot</id>
+			<name>Internal Snapshots</name>
+			<url>http://epc.ub.uu.se/nexus/repository/epc-snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>maven-public</id>
-            <name>LSU Nexus Repository</name>
-            <url>http://epc.ub.uu.se/nexus/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <updatePolicy>daily</updatePolicy>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.22.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
-                
-                
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.sonarsource.scanner.maven</groupId>
-                    <artifactId>sonar-maven-plugin</artifactId>
-                    <version>${sonar.scanner.version}</version>
-                </plugin>
-                <!-- Docker -->
-                <plugin>
-                    <groupId>com.spotify</groupId>
-                    <artifactId>dockerfile-maven-plugin</artifactId>
-                    <version>1.3.7</version>
+	<repositories>
+		<repository>
+			<id>maven-public</id>
+			<name>LSU Nexus Repository</name>
+			<url>http://epc.ub.uu.se/nexus/repository/maven-public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<updatePolicy>daily</updatePolicy>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven-public</id>
+			<name>LSU Nexus Repository</name>
+			<url>http://epc.ub.uu.se/nexus/repository/maven-public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<updatePolicy>daily</updatePolicy>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>2.22.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>3.1.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.1.0</version>
+				</plugin>
+
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>${sonar.scanner.version}</version>
+				</plugin>
+				<!-- Docker -->
+				<plugin>
+					<groupId>com.spotify</groupId>
+					<artifactId>dockerfile-maven-plugin</artifactId>
+					<version>1.3.7</version>
 					<dependencies>
 						<dependency>
 							<groupId>javax.activation</groupId>
@@ -209,16 +209,11 @@
 							</goals>
 						</execution>
 					</executions>
-                </plugin>
-				<plugin>
-					<groupId>com.spotify</groupId>
-					<artifactId>docker-maven-plugin</artifactId>
-					<version>1.1.1</version>
 				</plugin>
-            </plugins>
-        </pluginManagement>
+			</plugins>
+		</pluginManagement>
 
-        <plugins>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -227,81 +222,83 @@
 				</configuration>
 			</plugin>
 		</plugins>
-    </build>
+	</build>
 
-    <profiles>
-        <profile>
-            <id>sonar-cora</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonarsource.scanner.maven</groupId>
-                        <artifactId>sonar-maven-plugin</artifactId>
-                        <version>${sonar.scanner.version}</version>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.sonarsource.java</groupId>
-                        <artifactId>sonar-java-plugin</artifactId>
-                        <version>${sonar.java.version}</version>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.22.0</version>
-                        <configuration>
-                            <argLine>-Xmx1G  -XX:+CMSClassUnloadingEnabled ${jacoco.agent.ut.arg}</argLine>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-failsafe-plugin</artifactId>
-                        <version>2.22.0</version>
-                        <configuration>
-                            <argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled ${jacoco.agent.it.arg}</argLine>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>integration-test</goal>
-                                    <goal>verify</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>${jacoco.version}</version>
-                        <executions>
-                            <execution>
-                                <id>prepare-ut-agent</id>
-                                <phase>process-test-classes</phase>
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                                <configuration>
-                                    <destFile>${sonar.jacoco.reportPath}</destFile>
-                                    <propertyName>jacoco.agent.ut.arg</propertyName>
-                                    <append>true</append>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>prepare-it-agent</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>prepare-agent-integration</goal>
-                                </goals>
-                                <configuration>
-                                    <destFile>${sonar.jacoco.itReportPath}</destFile>
-                                    <propertyName>jacoco.agent.it.arg</propertyName>
-                                    <append>true</append>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+	<profiles>
+		<profile>
+			<id>sonar-cora</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.sonarsource.scanner.maven</groupId>
+						<artifactId>sonar-maven-plugin</artifactId>
+						<version>${sonar.scanner.version}</version>
+					</plugin>
+					<plugin>
+						<groupId>org.sonarsource.java</groupId>
+						<artifactId>sonar-java-plugin</artifactId>
+						<version>${sonar.java.version}</version>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.22.0</version>
+						<configuration>
+							<argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled
+								${jacoco.agent.ut.arg}</argLine>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>2.22.0</version>
+						<configuration>
+							<argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled
+								${jacoco.agent.it.arg}</argLine>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>integration-test</goal>
+									<goal>verify</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>${jacoco.version}</version>
+						<executions>
+							<execution>
+								<id>prepare-ut-agent</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+								<configuration>
+									<destFile>${sonar.jacoco.reportPath}</destFile>
+									<propertyName>jacoco.agent.ut.arg</propertyName>
+									<append>true</append>
+								</configuration>
+							</execution>
+							<execution>
+								<id>prepare-it-agent</id>
+								<phase>package</phase>
+								<goals>
+									<goal>prepare-agent-integration</goal>
+								</goals>
+								<configuration>
+									<destFile>${sonar.jacoco.itReportPath}</destFile>
+									<propertyName>jacoco.agent.it.arg</propertyName>
+									<append>true</append>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
