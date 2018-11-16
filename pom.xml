@@ -221,6 +221,23 @@
 					<release>${java.release.version}</release>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.4.3</version>
+				<configuration>
+					<testPlugin>testng</testPlugin>
+					<targetClasses>
+						<param>se*</param>
+					</targetClasses>
+					<targetTests>
+						<param>se*</param>
+					</targetTests>
+<!-- 					<mutators> -->
+<!-- 						<mutator>ALL</mutator> -->
+<!-- 					</mutators> -->
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
