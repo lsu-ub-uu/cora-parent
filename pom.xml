@@ -37,7 +37,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<testng.version>6.14.3</testng.version>
 		<sonar.scanner.version>3.5.0.1254</sonar.scanner.version>
-		<sonar.java.version>5.7.0.15470</sonar.java.version>
+		<sonar.java.version>5.9.1.16423</sonar.java.version>
 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
 		<jacoco.version>0.8.2</jacoco.version>
 		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
