@@ -44,6 +44,12 @@
 		<sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
 	</properties>
 
+	<scm>
+		<connection>scm:git:https://github.com/lsu-ub-uu/cora-parent.git</connection>
+		<developerConnection>scm:git:https://github.com/lsu-ub-uu/cora-parent.git</developerConnection>
+		<url>https://github.com/lsu-ub-uu/cora-parent.git</url>
+	</scm>
+	
 	<organization>
 		<name>Library systems unit, Uppsala University Library, Sweden</name>
 		<url>http://ub.uu.se</url>
