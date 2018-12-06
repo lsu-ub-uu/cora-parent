@@ -141,6 +141,7 @@
 			<name>LSU Nexus Repository</name>
 			<url>http://epc.ub.uu.se/nexus/repository/maven-public/</url>
 			<releases>
+				<updatePolicy>always</updatePolicy>
 				<enabled>true</enabled>
 			</releases>
 			<snapshots>
