@@ -23,7 +23,7 @@
 
 	<groupId>se.uu.ub.cora</groupId>
 	<artifactId>cora-parent</artifactId>
-	<version>0.8.1</version>
+	<version>0.8.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Cora Parent</name>
 	<description>Cora Parent POM</description>
@@ -46,7 +46,7 @@
 		<connection>scm:git:https://github.com/lsu-ub-uu/cora-parent.git</connection>
 		<developerConnection>scm:git:https://github.com/lsu-ub-uu/cora-parent.git</developerConnection>
 		<url>https://github.com/lsu-ub-uu/cora-parent.git</url>
-	  <tag>cora-parent-0.8.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 	
 	<organization>
