@@ -34,10 +34,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<testng.version>6.14.3</testng.version>
-		<sonar.scanner.version>3.5.0.1254</sonar.scanner.version>
-		<sonar.java.version>5.9.1.16423</sonar.java.version>
+		<sonar.maven.plugin>3.6.0.1398</sonar.maven.plugin>
+		<sonar.java.version>5.11.0.17289</sonar.java.version>
 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-		<jacoco.version>0.8.2</jacoco.version>
+		<jacoco.version>0.8.3</jacoco.version>
 		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
 		<sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
 	</properties>
@@ -171,12 +171,12 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>2.22.0</version>
+					<version>2.22.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.1.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -193,7 +193,7 @@
 				<plugin>
 					<groupId>org.sonarsource.scanner.maven</groupId>
 					<artifactId>sonar-maven-plugin</artifactId>
-					<version>${sonar.scanner.version}</version>
+					<version>${sonar.maven.plugin}</version>
 				</plugin>
 				<!-- Docker -->
 				<plugin>
@@ -230,7 +230,7 @@
 			<plugin>
 				<groupId>org.pitest</groupId>
 				<artifactId>pitest-maven</artifactId>
-				<version>1.4.3</version>
+				<version>1.4.6</version>
 				<configuration>
 					<testPlugin>testng</testPlugin>
 					<targetClasses>
@@ -260,7 +260,7 @@
 					<plugin>
 						<groupId>org.sonarsource.scanner.maven</groupId>
 						<artifactId>sonar-maven-plugin</artifactId>
-						<version>${sonar.scanner.version}</version>
+						<version>${sonar.maven.plugin}</version>
 					</plugin>
 					<plugin>
 						<groupId>org.sonarsource.java</groupId>
@@ -270,7 +270,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.22.0</version>
+						<version>2.22.1</version>
 						<configuration>
 							<argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled
 								${jacoco.agent.ut.arg}</argLine>
@@ -279,7 +279,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-failsafe-plugin</artifactId>
-						<version>2.22.0</version>
+						<version>2.22.1</version>
 						<configuration>
 							<argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled
 								${jacoco.agent.it.arg}</argLine>
