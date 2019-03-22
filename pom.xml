@@ -23,7 +23,7 @@
 
 	<groupId>se.uu.ub.cora</groupId>
 	<artifactId>cora-parent</artifactId>
-	<version>0.9-SNAPSHOT</version>
+	<version>0.10-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Cora Parent</name>
 	<description>Cora Parent POM</description>
