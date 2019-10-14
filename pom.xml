@@ -1,121 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ Copyright 2015, 2018, 2019 Uppsala University Library
-  ~
-  ~ This file is part of Cora.
-  ~
-  ~     Cora is free software: you can redistribute it and/or modify
-  ~     it under the terms of the GNU General Public License as published by
-  ~     the Free Software Foundation, either version 3 of the License, or
-  ~     (at your option) any later version.
-  ~
-  ~     Cora is distributed in the hope that it will be useful,
-  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~     GNU General Public License for more details.
-  ~
-  ~     You should have received a copy of the GNU General Public License
-  ~     along with Cora.  If not, see <http://www.gnu.org/licenses />.
-  -->
+<!-- ~ Copyright 2015, 2018, 2019 Uppsala University Library ~ ~ This file 
+	is part of Cora. ~ ~ Cora is free software: you can redistribute it and/or 
+	modify ~ it under the terms of the GNU General Public License as published 
+	by ~ the Free Software Foundation, either version 3 of the License, or ~ 
+	(at your option) any later version. ~ ~ Cora is distributed in the hope that 
+	it will be useful, ~ but WITHOUT ANY WARRANTY; without even the implied warranty 
+	of ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the ~ GNU General 
+	Public License for more details. ~ ~ You should have received a copy of the 
+	GNU General Public License ~ along with Cora. If not, see <http://www.gnu.org/licenses 
+	/>. -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>se.uu.ub.cora</groupId>
 	<artifactId>cora-parent</artifactId>
-	<version>0.10-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Cora Parent</name>
 	<description>Cora Parent POM</description>
 
 	<properties>
-		<java.release.version>11</java.release.version>
+		<java.release.version>13</java.release.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<activation.version>1.1.1</activation.version>
 
-		<dockerfile-maven-plugin.version>1.3.7</dockerfile-maven-plugin.version>
+		<dockerfile-maven-plugin.version>1.4.12</dockerfile-maven-plugin.version>
 
 		<maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
-		<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-		<maven-failsafe-plugin.version>2.22.1</maven-failsafe-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
 		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
 		<maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-		<maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+		<maven-source-plugin.version>3.1.0</maven-source-plugin.version>
+		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
 
-		<pitest-maven.version>1.4.6</pitest-maven.version>
+		<pitest-maven.version>1.4.10</pitest-maven.version>
 
-		<sonar-java-plugin.version>5.11.0.17289</sonar-java-plugin.version>
-		<sonar-maven-plugin.version>3.6.0.1398</sonar-maven-plugin.version>
-		
-		<testng.version>6.14.3</testng.version>
-		
+		<sonar-java-plugin.version>5.14.0.18788</sonar-java-plugin.version>
+		<sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
+
+		<testng.version>7.0.0</testng.version>
+
 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-		<jacoco.version>0.8.3</jacoco.version>
+		<jacoco.version>0.8.4</jacoco.version>
 		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
 		<sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
 	</properties>
-
 	<scm>
 		<connection>scm:git:https://github.com/lsu-ub-uu/cora-parent.git</connection>
 		<developerConnection>scm:git:https://github.com/lsu-ub-uu/cora-parent.git</developerConnection>
 		<url>https://github.com/lsu-ub-uu/cora-parent.git</url>
-	  <tag>release/0.9</tag>
-  </scm>
-	
-	<organization>
-		<name>Library systems unit, Uppsala University Library, Sweden</name>
-		<url>http://ub.uu.se</url>
-	</organization>
-	<developers>
-		<developer>
-			<id>madeleine</id>
-			<name>Madeleine Kennbäck</name>
-			<email>madeleine.kennback@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>+1</timezone>
-		</developer>
-		<developer>
-			<id>olov</id>
-			<name>Olov McKie</name>
-			<email>olov.mckie@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>+1</timezone>
-		</developer>
-	</developers>
-	<contributors>
-		<contributor>
-			<name>Marcus Lindström</name>
-			<email>marcus.lindstrom@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>system administrator</role>
-			</roles>
-			<timezone>+1</timezone>
-		</contributor>
-		<contributor>
-			<name>Stefan Andersson</name>
-			<email>stefan.andersson@ub.uu.se</email>
-			<organization>Library systems unit, Uppsala University Library</organization>
-			<organizationUrl>http://epc.ub.uu.se</organizationUrl>
-			<roles>
-				<role>information specialist</role>
-			</roles>
-			<timezone>+1</timezone>
-		</contributor>
-	</contributors>
-
+		<tag>release/0.9</tag>
+	</scm>
 	<distributionManagement>
 		<repository>
 			<id>epc-release</id>
@@ -128,9 +70,8 @@
 			<url>http://epc.ub.uu.se/nexus/repository/epc-snapshot</url>
 		</snapshotRepository>
 	</distributionManagement>
-
-	
 	<build>
+		<finalName>cora-${project.artifactId}-${project.version}</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -181,7 +122,6 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -189,7 +129,7 @@
 				<configuration>
 					<release>${java.release.version}</release>
 				</configuration>
-      		</plugin>
+			</plugin>
 			<plugin>
 				<groupId>org.pitest</groupId>
 				<artifactId>pitest-maven</artifactId>
@@ -201,10 +141,11 @@
 					</targetClasses>
 					<targetTests>
 						<param>se*</param>
+						1.0-SNAPSHOT
 					</targetTests>
-<!-- 					<mutators> -->
-<!-- 						<mutator>ALL</mutator> -->
-<!-- 					</mutators> -->
+					<!-- <mutators> -->
+					<!-- <mutator>ALL</mutator> -->
+					<!-- </mutators> -->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -212,9 +153,22 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<version>${maven-release-plugin.version}</version>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven-source-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-
 	<profiles>
 		<profile>
 			<id>sonar-cora</id>
@@ -236,7 +190,7 @@
 						<version>${maven-surefire-plugin.version}</version>
 						<configuration>
 							<argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled
-								${jacoco.agent.ut.arg}</argLine>
+								${jacoco.agent.u1.0-SNAPSHOTt.arg}</argLine>
 						</configuration>
 					</plugin>
 					<plugin>
@@ -291,5 +245,4 @@
 			</build>
 		</profile>
 	</profiles>
-
 </project>
