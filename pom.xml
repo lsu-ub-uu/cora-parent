@@ -187,7 +187,9 @@
 					  <version>3.1.0</version> <!-- Checkstyle Plugin version -->
 					
 					  <!-- ... Configuration, Executions ... -->
-					
+					  <configuration>
+				        <excludes>**/module-info.java</excludes>
+					  </configuration>
 					  <dependencies>
 					    <dependency>
 					      <groupId>com.puppycrawl.tools</groupId>
