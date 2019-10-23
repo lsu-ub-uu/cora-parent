@@ -40,10 +40,10 @@
 
 		<maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
 		<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-		<maven-failsafe-plugin.version>2.22.1</maven-failsafe-plugin.version>
+		<maven-failsafe-plugin.version>3.0.0-M3</maven-failsafe-plugin.version>
 		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
 		<maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-		<maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+		<maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
 
 		<pitest-maven.version>1.4.6</pitest-maven.version>
 
@@ -53,7 +53,7 @@
 		<testng.version>6.14.3</testng.version>
 		
 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-		<jacoco.version>0.8.3</jacoco.version>
+		<jacoco.version>0.8.5</jacoco.version>
 		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
 		<sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
 	</properties>
