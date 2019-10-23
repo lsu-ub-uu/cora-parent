@@ -183,7 +183,8 @@
 			<build>
 				<plugins>
 					<plugin>
-					  <artifactId>maven-checkstyle-plugin</artifactId>
+					  <groupId>org.apache.maven.plugins</groupId>
+    				  <artifactId>maven-checkstyle-plugin</artifactId>
 					  <version>3.1.0</version> <!-- Checkstyle Plugin version -->
 					
 					  <!-- ... Configuration, Executions ... -->
