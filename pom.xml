@@ -7,9 +7,12 @@
 	it will be useful, ~ but WITHOUT ANY WARRANTY; without even the implied warranty 
 	of ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the ~ GNU General 
 	Public License for more details. ~ ~ You should have received a copy of the 
-	GNU General Public License ~ along with Cora. If not, see <http://www.gnu.org/licenses />. -->
+	GNU General Public License ~ along with Cora. If not, see <http://www.gnu.org/licenses 
+	/>. -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>se.uu.ub.cora</groupId>
@@ -24,7 +27,7 @@
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		
+
 		<maven.required.version>3.3.9</maven.required.version>
 
 		<dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
@@ -41,7 +44,7 @@
 		<maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
 		<maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
 		<maven-site-plugin.version>3.9.1</maven-site-plugin.version>
-		
+
 		<activation.version>1.1.1</activation.version>
 
 		<pitest-maven.version>1.5.2</pitest-maven.version>
@@ -53,8 +56,10 @@
 
 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
 		<jacoco.version>0.8.5</jacoco.version>
-		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
-		<sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath>
+<!-- 		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath> -->
+		<!-- <sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath> -->
+		<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.coverage.jacoco.xmlReportPaths>
+
 	</properties>
 	<scm>
 		<connection>scm:git:https://github.com/lsu-ub-uu/cora-parent.git</connection>
@@ -264,23 +269,23 @@
 									<goal>prepare-agent</goal>
 								</goals>
 								<configuration>
-									<destFile>${sonar.jacoco.reportPath}</destFile>
+									<destFile>${sonar.coverage.jacoco.xmlReportPaths}</destFile>
 									<propertyName>jacoco.agent.ut.arg</propertyName>
 									<append>true</append>
 								</configuration>
 							</execution>
-							<execution>
-								<id>prepare-it-agent</id>
-								<phase>package</phase>
-								<goals>
-									<goal>prepare-agent-integration</goal>
-								</goals>
-								<configuration>
-									<destFile>${sonar.jacoco.itReportPath}</destFile>
-									<propertyName>jacoco.agent.it.arg</propertyName>
-									<append>true</append>
-								</configuration>
-							</execution>
+<!-- 							<execution> -->
+<!-- 								<id>prepare-it-agent</id> -->
+<!-- 								<phase>package</phase> -->
+<!-- 								<goals> -->
+<!-- 									<goal>prepare-agent-integration</goal> -->
+<!-- 								</goals> -->
+<!-- 								<configuration> -->
+<!-- 									<destFile>${sonar.jacoco.itReportPath}</destFile> -->
+<!-- 									<propertyName>jacoco.agent.it.arg</propertyName> -->
+<!-- 									<append>true</append> -->
+<!-- 								</configuration> -->
+<!-- 							</execution> -->
 						</executions>
 					</plugin>
 				</plugins>
