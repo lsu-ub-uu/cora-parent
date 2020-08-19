@@ -50,7 +50,7 @@
 
 		<jacoco.version>0.8.5</jacoco.version>
 
-		<sonar.java.libraries>target</sonar.java.libraries>
+		<sonar.java.binaries>target</sonar.java.binaries>
 		<sonar-java-plugin.version>6.6.0.22815</sonar-java-plugin.version>
 		<sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
 
