@@ -31,6 +31,7 @@
 		<maven.required.version>3.3.9</maven.required.version>
 
 		<dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
+		<activation.version>1.1.1</activation.version>
 
 		<maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -45,20 +46,15 @@
 		<maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
 		<maven-site-plugin.version>3.9.1</maven-site-plugin.version>
 
-		<activation.version>1.1.1</activation.version>
+		<testng.version>7.0.0</testng.version>
 
-		<pitest-maven.version>1.5.2</pitest-maven.version>
+		<jacoco.version>0.8.5</jacoco.version>
 
+		<sonar.java.libraries>target</sonar.java.libraries>
 		<sonar-java-plugin.version>6.6.0.22815</sonar-java-plugin.version>
 		<sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
 
-		<testng.version>7.0.0</testng.version>
-
-<!-- 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin> -->
-		<jacoco.version>0.8.5</jacoco.version>
-<!-- 		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath> -->
-<!-- 		<sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath> -->
-<!-- 		<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.coverage.jacoco.xmlReportPaths> -->
+		<pitest-maven.version>1.5.2</pitest-maven.version>
 
 	</properties>
 	<scm>
@@ -235,19 +231,11 @@
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
 						<version>${maven-surefire-plugin.version}</version>
-						<!-- <configuration> -->
-						<!-- <argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled -->
-						<!-- ${jacoco.agent.ut.arg}</argLine> -->
-						<!-- </configuration> -->
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-failsafe-plugin</artifactId>
 						<version>${maven-failsafe-plugin.version}</version>
-						<!-- <configuration> -->
-						<!-- <argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled -->
-						<!-- ${jacoco.agent.it.arg}</argLine> -->
-						<!-- </configuration> -->
 						<executions>
 							<execution>
 								<goals>
@@ -257,37 +245,6 @@
 							</execution>
 						</executions>
 					</plugin>
-					<!-- <plugin> -->
-					<!-- <groupId>org.jacoco</groupId> -->
-					<!-- <artifactId>jacoco-maven-plugin</artifactId> -->
-					<!-- <version>${jacoco.version}</version> -->
-					<!-- <executions> -->
-					<!-- <execution> -->
-					<!-- <id>prepare-ut-agent</id> -->
-					<!-- <phase>process-test-classes</phase> -->
-					<!-- <goals> -->
-					<!-- <goal>prepare-agent</goal> -->
-					<!-- </goals> -->
-					<!-- <configuration> -->
-					<!-- <destFile>${sonar.coverage.jacoco.xmlReportPaths}</destFile> -->
-					<!-- <propertyName>jacoco.agent.ut.arg</propertyName> -->
-					<!-- <append>true</append> -->
-					<!-- </configuration> -->
-					<!-- </execution> -->
-					<!-- <execution> -->
-					<!-- <id>prepare-it-agent</id> -->
-					<!-- <phase>package</phase> -->
-					<!-- <goals> -->
-					<!-- <goal>prepare-agent-integration</goal> -->
-					<!-- </goals> -->
-					<!-- <configuration> -->
-					<!-- <destFile>${sonar.jacoco.itReportPath}</destFile> -->
-					<!-- <propertyName>jacoco.agent.it.arg</propertyName> -->
-					<!-- <append>true</append> -->
-					<!-- </configuration> -->
-					<!-- </execution> -->
-					<!-- </executions> -->
-					<!-- </plugin> -->
 					<plugin>
 						<groupId>org.jacoco</groupId>
 						<artifactId>jacoco-maven-plugin</artifactId>
