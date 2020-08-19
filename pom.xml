@@ -54,11 +54,11 @@
 
 		<testng.version>7.0.0</testng.version>
 
-		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+<!-- 		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin> -->
 		<jacoco.version>0.8.5</jacoco.version>
-		<!-- <sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath> -->
-		<!-- <sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath> -->
-		<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.coverage.jacoco.xmlReportPaths>
+<!-- 		<sonar.jacoco.itReportPath>${project.basedir}/../cora-therest/target/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath> -->
+<!-- 		<sonar.jacoco.reportPath>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.jacoco.reportPath> -->
+<!-- 		<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco/jacoco-ut.exec</sonar.coverage.jacoco.xmlReportPaths> -->
 
 	</properties>
 	<scm>
@@ -235,19 +235,19 @@
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
 						<version>${maven-surefire-plugin.version}</version>
-						<configuration>
-							<argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled
-								${jacoco.agent.ut.arg}</argLine>
-						</configuration>
+						<!-- <configuration> -->
+						<!-- <argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled -->
+						<!-- ${jacoco.agent.ut.arg}</argLine> -->
+						<!-- </configuration> -->
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-failsafe-plugin</artifactId>
 						<version>${maven-failsafe-plugin.version}</version>
-						<configuration>
-							<argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled
-								${jacoco.agent.it.arg}</argLine>
-						</configuration>
+						<!-- <configuration> -->
+						<!-- <argLine>-Xmx1G -XX:+CMSClassUnloadingEnabled -->
+						<!-- ${jacoco.agent.it.arg}</argLine> -->
+						<!-- </configuration> -->
 						<executions>
 							<execution>
 								<goals>
@@ -294,27 +294,15 @@
 						<version>${jacoco.version}</version>
 						<executions>
 							<execution>
-								<id>default-prepare-agent</id>
+								<id>prepare-agent</id>
 								<goals>
 									<goal>prepare-agent</goal>
 								</goals>
 							</execution>
 							<execution>
-								<id>default-prepare-agent-integration</id>
-								<goals>
-									<goal>prepare-agent-integration</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>default-report</id>
+								<id>report</id>
 								<goals>
 									<goal>report</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>default-report-integration</id>
-								<goals>
-									<goal>report-integration</goal>
 								</goals>
 							</execution>
 						</executions>
