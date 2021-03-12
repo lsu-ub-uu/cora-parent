@@ -23,7 +23,7 @@
 	<description>Cora Parent POM</description>
 
 	<properties>
-		<java.release.version>14</java.release.version>
+		<java.release.version>15</java.release.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -51,9 +51,9 @@
 		<jacoco.version>0.8.5</jacoco.version>
 
 		<sonar-java-plugin.version>6.6.0.22815</sonar-java-plugin.version>
-		<sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
+		<sonar-maven-plugin.version>3.8.0.2131</sonar-maven-plugin.version>
 
-		<pitest-maven.version>1.5.2</pitest-maven.version>
+		<pitest-maven.version>1.6.4</pitest-maven.version>
 
 	</properties>
 	<scm>
