@@ -45,9 +45,9 @@
 
 		<testng.version>7.0.0</testng.version>
 
-		<jacoco.version>0.8.5</jacoco.version>
+		<jacoco.version>0.8.6</jacoco.version>
 
-		<sonar-java-plugin.version>6.6.0.22815</sonar-java-plugin.version>
+		<sonar-java-plugin.version>6.13.0.25138</sonar-java-plugin.version>
 		<sonar-maven-plugin.version>3.8.0.2131</sonar-maven-plugin.version>
 
 		<pitest-maven.version>1.6.4</pitest-maven.version>
