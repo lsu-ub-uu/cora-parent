@@ -20,7 +20,7 @@
 	<description>Cora Parent POM</description>
 
 	<properties>
-		<java.release.version>15</java.release.version>
+		<java.release.version>16</java.release.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -39,7 +39,7 @@
 		<maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
 		<maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
 		<maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
-		<maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
+		<maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
 		<maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
 		<maven-site-plugin.version>3.9.1</maven-site-plugin.version>
 		<maven-war-plugin.version>3.3.1</maven-war-plugin.version>
@@ -49,9 +49,9 @@
 		<jacoco.version>0.8.6</jacoco.version>
 
 		<sonar-java-plugin.version>6.13.0.25138</sonar-java-plugin.version>
-		<sonar-maven-plugin.version>3.8.0.2131</sonar-maven-plugin.version>
+		<sonar-maven-plugin.version>3.9.0.2155</sonar-maven-plugin.version>
 
-		<pitest-maven.version>1.6.4</pitest-maven.version>
+		<pitest-maven.version>1.6.9</pitest-maven.version>
 
 	</properties>
 	<scm>
