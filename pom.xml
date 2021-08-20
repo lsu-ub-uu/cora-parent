@@ -33,7 +33,7 @@
 		<maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 		<maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
-		<maven-release-plugin.version>3.0.0-M1</maven-release-plugin.version>
+		<maven-release-plugin.version>3.0.0-M4</maven-release-plugin.version>
 		<maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
 		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
 		<maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
@@ -44,11 +44,11 @@
 		<maven-site-plugin.version>3.9.1</maven-site-plugin.version>
 		<maven-war-plugin.version>3.3.1</maven-war-plugin.version>
 
-		<testng.version>7.0.0</testng.version>
+		<testng.version>7.4.0</testng.version>
 
-		<jacoco.version>0.8.6</jacoco.version>
+		<jacoco.version>0.8.7</jacoco.version>
 
-		<sonar-java-plugin.version>6.13.0.25138</sonar-java-plugin.version>
+		<sonar-java-plugin.version>7.2.0.26923</sonar-java-plugin.version>
 		<sonar-maven-plugin.version>3.9.0.2155</sonar-maven-plugin.version>
 
 		<pitest-maven.version>1.6.9</pitest-maven.version>
