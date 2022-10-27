@@ -20,7 +20,7 @@
 	<description>Cora Parent POM</description>
 
 	<properties>
-		<java.release.version>18</java.release.version>
+		<java.release.version>17</java.release.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
