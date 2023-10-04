@@ -30,28 +30,28 @@
 		<dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
 		<activation.version>1.1.1</activation.version>
 
-		<maven-assembly-plugin.version>3.5.0</maven-assembly-plugin.version>
+		<maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
 		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-		<maven-failsafe-plugin.version>3.1.0</maven-failsafe-plugin.version>
-		<maven-release-plugin.version>3.0.0</maven-release-plugin.version>
+		<maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
+		<maven-release-plugin.version>3.0.1</maven-release-plugin.version>
 		<maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-		<maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
-		<maven-clean-plugin.version>3.2.0</maven-clean-plugin.version>
+		<maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+		<maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+		<maven-clean-plugin.version>3.3.1</maven-clean-plugin.version>
 		<maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
-		<maven-enforcer-plugin.version>3.3.0</maven-enforcer-plugin.version>
+		<maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
 		<maven-install-plugin.version>3.1.1</maven-install-plugin.version>
 		<maven-site-plugin.version>3.12.1</maven-site-plugin.version>
-		<maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+		<maven-war-plugin.version>3.4.0</maven-war-plugin.version>
 
 		<testng.version>7.5</testng.version>
 
 		<jacoco.version>0.8.8</jacoco.version>
 
 		<sonar-java-plugin.version>7.11.0.29148</sonar-java-plugin.version>
-		<sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
+		<sonar-maven-plugin.version>3.10.0.2594</sonar-maven-plugin.version>
 
-		<pitest-maven.version>1.13.1</pitest-maven.version>
+		<pitest-maven.version>1.15.0</pitest-maven.version>
 
 	</properties>
 	<scm>
