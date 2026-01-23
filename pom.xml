@@ -30,30 +30,30 @@
 		<dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
 		<activation.version>1.1.1</activation.version>
 
-		<maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
+		<maven-assembly-plugin.version>3.8.0</maven-assembly-plugin.version>
 		<maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
 		<maven-failsafe-plugin.version>3.5.4</maven-failsafe-plugin.version>
-		<maven-release-plugin.version>3.1.1</maven-release-plugin.version>
-		<maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+		<maven-release-plugin.version>3.3.1</maven-release-plugin.version>
+		<maven-resources-plugin.version>3.4.0</maven-resources-plugin.version>
 		<maven-shade-plugin.version>3.6.1</maven-shade-plugin.version>
-		<maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+		<maven-source-plugin.version>3.4.0</maven-source-plugin.version>
 		<maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
 		<maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
 		<maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
 		<maven-enforcer-plugin.version>3.6.2</maven-enforcer-plugin.version>
 		<maven-install-plugin.version>3.1.4</maven-install-plugin.version>
 		<maven-site-plugin.version>3.21.0</maven-site-plugin.version>
-		<maven-war-plugin.version>3.5.0</maven-war-plugin.version>
-		<exec-maven-plugin.version>3.6.2</exec-maven-plugin.version>
+		<maven-war-plugin.version>3.5.1</maven-war-plugin.version>
+		<exec-maven-plugin.version>3.6.3</exec-maven-plugin.version>
 
 		<testng.version>7.11.0</testng.version>
 
 		<jacoco.version>0.8.14</jacoco.version>
 
 		<sonar-java-plugin.version>8.19.0.40387</sonar-java-plugin.version>
-		<sonar-maven-plugin.version>5.2.0.4988</sonar-maven-plugin.version>
+		<sonar-maven-plugin.version>5.5.0.6356</sonar-maven-plugin.version>
 
-		<pitest-maven.version>1.21.0</pitest-maven.version>
+		<pitest-maven.version>1.22.0</pitest-maven.version>
 		<pitest-testng-plugin.version>1.0.0</pitest-testng-plugin.version>
 
 	</properties>
